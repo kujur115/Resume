@@ -1,8 +1,11 @@
-var navMenuAnchorTags=document.querySelectorAll('.nac a');
+var navMenuAnchorTags=document.querySelectorAll('nav a');
 for(let i=0;i<navMenuAnchorTags.length;i++){
     navMenuAnchorTags[i].addEventListener('click',function(event){
         event.preventDefault();
         var targetSectionId=this.textContent.trim().toLowerCase();
+        if(targetSectionId=='home'){
+            return;
+        }
         var targetSection=document.getElementById(targetSectionId);
         var interval=setInterval(function(){
             var targetCoordenate=targetSection.getBoundingClientRect();
@@ -11,7 +14,7 @@ for(let i=0;i<navMenuAnchorTags.length;i++){
                 return;
             }
             window.scrollBy(0,50);
-        },20);
+        },40);
 
     });
 }
