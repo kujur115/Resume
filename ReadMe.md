@@ -10,7 +10,8 @@ I am an engineering graduate specialising in Electrical Engineering from the Ind
 # 📊 GitHub Stats:
 ![](https://github-readme-stats.vercel.app/api?username=kujur115&theme=dark&hide_border=true&include_all_commits=true&count_private=true)<br/>
 ![](https://github-readme-streak-stats.herokuapp.com/?user=kujur115&theme=dark&hide_border=true)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=kujur115&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=kujur115&theme=dark&hide_border=true&include_all_commits=true&count_private=true&layout=compact)<br/>
+![](./imag/taship-journey.jpg)
 
 ## 🏆 GitHub Trophies
 ![](https://github-profile-trophy.vercel.app/?username=kujur115&theme=radical&no-frame=true&no-bg=false&margin-w=4)
