@@ -1,41 +1,39 @@
-var progressBars = document.querySelectorAll('.skills-progress > div');
-var skillsContainer = document.getElementsByClassName('skills-container');
-window.addEventListener('scroll',checkScroll);
-var animationDone =false;
+var progressBars = document.querySelectorAll(".skills-progress > div");
+var skillsContainer = document.getElementsByClassName("skills-container");
+window.addEventListener("scroll", checkScroll);
+var animationDone = false;
 
-function fillBars(){
-    for(let bar of progressBars){
-        let targetWidth=bar.getAttribute('data-bar-width');
-        let currentWidth =0;
-        let interval =setInterval(function(){
-            if(currentWidth>targetWidth){
-                clearInterval(interval);
-                return;
-            }
-            currentWidth++;
-            bar.style.width=currentWidth+'%';
-        },5);
-    }
+function fillBars() {
+  for (let bar of progressBars) {
+    let targetWidth = bar.getAttribute("data-bar-width");
+    let currentWidth = 0;
+    let interval = setInterval(function () {
+      if (currentWidth > targetWidth) {
+        clearInterval(interval);
+        return;
+      }
+      currentWidth++;
+      bar.style.width = currentWidth + "%";
+    }, 5);
+  }
 }
 
-function initialiseBars(){
-    for(let bar of progressBars){
-        bar.style.width=0+'%';
-    }
+function initialiseBars() {
+  for (let bar of progressBars) {
+    bar.style.width = 0 + "%";
+  }
 }
 initialiseBars();
-function checkScroll(){
-
-    var coordinates =skillsContainer.getBoundingClientRect();
-    if(!animationDone && coordinates.top < window.innerHeight){
-        animationDone=true;
-        fillBars();
-    }else if(coordinates.top > window.innerHeight){
-        animationDone=false;
-        initialiseBars();
-    }
+function checkScroll() {
+  var coordinates = skillsContainer.getBoundingClientRect();
+  if (!animationDone && coordinates.top < window.innerHeight) {
+    animationDone = true;
+    fillBars();
+  } else if (coordinates.top > window.innerHeight) {
+    animationDone = false;
+    initialiseBars();
+  }
 }
-
 
 // var progressBars = document.querySelectorAll('.skill-progress > div');
 // var skillsContainer = document.getElementsByClassName('skill-progress');
@@ -57,7 +55,7 @@ function checkScroll(){
 //             currentWidth++;
 //             progressBars[i].style.width=currentWidth+'%';
 //         },5);
-    
+
 // }
 
 // // function initialiseBars(){
